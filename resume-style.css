@@ -1,51 +1,56 @@
 header {
     /* give each element some color to see more easily */
-    background-color: teal;
+    background-color: #daebe8;
     /* notice this property on each rule, though, we'll use it when we're laying out the Parent Element's grid-template-area */
     grid-area: header;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
   }
   main {
-    background-color: lightblue;
+    background-color: #cfe0e8;
     grid-area: main;
   }
   .main2{
-    background-color: lightblue;
+    background-color: #cfe0e8;
     grid-area: main2;
   }
   nav {
-    background-color: cyan;
+    background-color: #b7d7e8;
     grid-area: nav;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   aside {
-    background-color: purple;
+    background-color: #87bdd8;
     grid-area: aside;
   }
   .banner {
-    background-color: darkblue;
+    background-color: #87bdd8;
     grid-area: banner;
     color: white;
     text-align: center;
   }
   footer {
-    background-color: violet;
+    background-color: #b7d7e8;
     grid-area: footer;
   }
 
   .container {
     display: grid;
 
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: 45pt 55pt 190pt 5pt 190pt 45pt;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 45pt 55pt 190pt 5pt 190pt 55pt;
 
     grid-template-areas:
-      "aside header header "
-      "aside nav nav "
-      "main main main "
-      "banner banner banner "
-      "main2 main2 main2 "
-      "footer footer footer "
+      "aside header header header "
+      "aside nav nav nav "
+      "main main main main "
+      "banner banner banner banner "
+      "main2 main2 main2 main2"
+      "footer footer footer footer "
   }
 
   /* .container {
